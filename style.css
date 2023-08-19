@@ -1,0 +1,331 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-color);
+    overflow-x: hidden;
+}
+
+:root {
+    --bg-color: #fff;
+    --text-color: #000;
+}
+
+/* .sun {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    position: relative;
+    left: 41rem;
+    bottom: 5rem;
+} */
+
+/* .moon {
+    display: none;
+    font-size: 2.5rem;
+    position: relative;
+    left: 41rem;
+    bottom: 5rem;
+} */
+
+.dark {
+    background-color: black;
+    color: #fff;
+}
+
+.cursor {
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    background: white;
+    color: black;
+}
+
+/* s */
+
+section {
+    min-height: 100vh;
+    width: 100%;
+}
+
+ul{
+    position: relative;
+    top: 1.5rem;
+}
+
+ul a{
+    text-decoration: none;
+    color: black;
+    margin: 0 1rem;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 2rem;
+}
+
+.menu {
+    width: 6rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+
+.works {
+    background-attachment: fixed;
+}
+
+.text1 {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.text2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 4rem;
+    font-size: 4rem;
+}
+
+.text3 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 8rem 0;
+    font-size: 4rem;
+}
+
+img {
+    width: 20rem;
+    height: 35rem;
+}
+
+.images {
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.img2 {
+    width: 25rem;
+}
+
+.img3 {
+    width: 27rem;
+}
+
+.work-text {
+    margin-top: 2rem;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.about {
+    font-size: 4rem;
+}
+
+.a-text1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.a-text2 {
+    font-size: 3rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.a-text3 {
+    font-size: 3rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.a-text4 {
+    font-size: 3rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.a-text5 {
+    font-size: 3rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.inputs {
+    position: relative;
+    top: 6rem;
+    display: grid;
+    justify-content: start;
+    gap: 3rem;
+}
+
+input {
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    background-color: rgb(213, 213, 213);
+    width: 25rem;
+    height: 4rem;
+}
+
+button {
+    width: 10rem;
+    height: 4rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    position: relative;
+    margin: 5rem 0;
+    top: 5rem;
+    left: 6rem;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+button:hover {
+    color: var(--bg-color);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--text-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+button:hover:before {
+    width: 100%;
+}
+
+
+@media screen and (max-width :500px) {
+    section {
+        min-height: auto;
+        width: 100%;
+    }
+
+    ul a{
+        display: none;
+    }
+
+    .home{
+        display: grid;
+        justify-content: center;
+    }
+
+    .text1 {
+        font-size: 2rem;
+        margin-top: 5rem;
+        margin-left: 0rem;
+    }
+    
+    .text2 {
+        position: relative;
+        top: -1px;
+      font-size: 2rem;
+        margin-left: 0rem;
+    }
+    
+    .text3 {
+        position: relative;
+        top: -8rem;
+      font-size: 2rem;
+        margin-left: 0rem;
+    }
+    .works{
+        position: relative;
+        bottom: 10rem;
+    }
+    .images{
+        width: 100%;
+    }
+
+    .img1{
+        width: 20rem;
+        height: auto;
+    }
+    .img2{
+        width: 20rem;
+        height: auto;
+    }
+    .img3{
+        width: 20rem;
+        height: auto;
+    }
+
+    .work-text{
+        font-size: 2rem;
+    }
+
+    .about-comp{
+        position: relative;
+        bottom: 6rem;   
+    }
+
+    .abt-txt{
+        font-size: 3rem;
+    }
+    .a-text1{
+        font-size: 1.5rem;
+    }
+    .a-text2{
+        font-size: 1.5rem;
+    }
+    .a-text3{
+        font-size: 1.5rem;
+    }
+    .a-text4{
+        font-size: 1.5rem;
+    }
+    .a-text5{
+        font-size: 1.5rem;
+    }
+
+    .about-text{
+        display: grid;
+    }
+    
+    .con-txt{
+        font-size: 3rem;
+    }
+
+    .contact{
+        position: relative;
+        bottom: 3rem;
+    }
+    
+    .inputs{
+        margin: -2rem 0;
+    }
+}
